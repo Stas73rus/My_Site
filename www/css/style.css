@@ -1,0 +1,1176 @@
+/*----------------------------------
+------------------------------------
+Основная страница
+------------------------------------
+----------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Suez+One'); /*импорт шрифта для текста с сайта google fonts*/
+/*font-family: 'Roboto Slab', serif;
+font-family: 'Suez One', serif;е*/
+
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+/*font-family: 'Baloo', cursive;*/
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+/*font-family: 'Lobster', cursive;*/
+@charset "UTF-8";
+
+* {
+	margin:0;
+	padding:0;
+}
+
+body, html, #site {
+	width:100%;
+	height:100%;
+}
+
+body {
+	background-size: cover;
+	background-position: center;
+	background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+a {
+	color: rgb(35,9,1);
+	text-decoration: none;
+	transition: all.6s ease;
+	-ms-transition: all.6s ease;
+	-o-transition: all.6s ease;
+	-moz-transition: all.6s ease;
+}
+header, header>div#logo>a>img, nav, footer, #prava, #main, 	.heading, #fotogal  {
+	float: left;
+}
+a:hover {
+	color: rgb(95,23,3);
+	text-decoration: none;
+	transition: all.6s ease;
+	-ms-transition: all.6s ease;
+	-o-transition: all.6s ease;
+	-moz-transition: all.6s ease;
+}
+
+header {
+	background-color: rgb(59,15,2);
+	width: 99.4%;
+	padding: 0.4%;
+	color: white;
+	border-bottom: 5px solid rgb(176,125,54);
+	font-family: 'Roboto Slab', serif;
+}
+
+header>div#logo>a>img {
+	width:50px;
+	height:50px;
+}
+
+header>div#logo>a {
+	color:white;
+}
+
+header>div#logo>a>span {
+	font-size: 40px;
+	margin-left: 10px;
+	font-family: 'Suez One', serif;
+}
+
+@media (min-width: 1275px) {
+	header>div#logo>a>img {
+		margin-left: 15%;
+	}
+	
+	#logo {
+		float: left;
+		width: 30%;
+	}
+
+	#ulaynovsk {
+		float: left;
+		width: 37%;
+	}
+
+	#reg_log {
+		float: right;
+		width: 30%;
+	}
+}
+
+@media (max-width: 1274px) and (min-width: 700px) {
+	header>div#logo>a>img {
+		margin-left: 10%;
+	}
+	
+	#logo {
+		float: left;
+		width: 50%;
+	}
+
+	#ulaynovsk {
+		visibility: hidden;
+		display: none;
+	}
+
+	#reg_log {
+		float: right;
+		width: 50%;
+	}
+}
+
+@media (max-width: 700px) {
+	header>div#logo>a>img {
+		margin-left: 1%;
+	}
+	
+	#logo {
+		width: 70%;
+	}
+
+	#ulaynovsk {
+		visibility: hidden;
+		display: none;
+	}
+
+	#reg_log {
+		visibility: hidden;
+		display: none;
+	}
+}
+
+#ulaynovsk {
+	text-align: center;
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+#ulaynovsk>a {
+	color:white;
+}
+
+#ulaynovsk>a:hover {
+	color: #dfdfdf;
+	border-bottom: 1px solid silver;
+}
+
+#reg_log>a {
+	color: white;
+}
+
+#reg_log>a>div#btn {
+	float: right;
+	margin-right: 3%;
+	margin-top: 5px;
+	border-radius: 5px;
+	padding: 5px 9px;
+	font-size: 24px;
+	background-color: rgba(153,102,36, 1);
+	text-shadow: #454545 0 0 2px;
+	color: white;9
+	border-bottom: 4px solid rgba(192, 143, 68, 1);
+}
+
+#reg_log>a>div#btn:hover {
+	margin-top: 7px;
+	border-bottom: 2px solid rgba(192, 143, 68, 1);
+}
+
+#reg_log>a>div#btn:active {
+	margin-top: 9px;
+	border-bottom: 0;
+}
+/*меню сайта*/
+
+nav {
+	font-family: 'Baloo', cursive;
+	background-color: white;
+	width: 99.4%;
+	padding: 7px 0.4%;
+	border-bottom: 2px solid #ebebeb;
+}
+
+nav a {
+	margin-top: -5px;
+	color: #323232;
+	font-size: 24px;
+	margin-left: 5%;
+}
+
+nav a:hover {
+	color: #e8622d;
+}
+
+.bar {
+	display: inline;
+	font-size: 1.4em;
+	margin-left: 4%;
+	float:left;
+	margin-top: 0.2%;
+	cursor:pointer;
+}
+
+.hideMenu {
+	display:none;
+	width: 100%;
+	float: left;
+}
+
+@media (min-width: 785px) {
+	.bar {
+		display:none;
+		visibility: hidden;
+	}
+}
+
+@media (max-width: 784px) {
+	.showMenu {
+		display:none;
+		visibility: hidden;
+	}
+}
+
+@media (min-width: 700px) {
+	
+}
+@media (max-width: 700px) {
+	/*.hideMenu {
+		visibility: hidden;
+		display: none;
+	}*/
+	
+}
+@media (max-width: 600px) and (min-width: 500px) {
+
+}
+
+@media (max-width: 498px)  {
+	
+}
+
+@media (max-width: 400px) {
+	
+}
+
+@media (max-width: 300px) {
+	
+}
+
+/*Конец стилей для шапки*/
+/*Основная часть сайта*/
+
+#site {
+	display: flex;
+	flex-direction: column;
+}
+
+#info {
+	flex: auto 1 0;
+}
+
+
+/*Конец основной части сайта*/
+/*Футер сайта*/
+
+footer {
+	float: left;
+	background-color: rgb(59,15,2);
+	width: 99.8%;
+	padding: 0.2%;
+	padding-bottom:0.8%;
+	color: white;
+	border-top: 5px solid rgb(176,125,54);
+	display: inline-block;	
+}
+
+#myname {
+	margin-right: 5%;
+	color: #f4f4f4ref;
+	font-size: 18px;
+	padding-top: 15px;
+	float: right;
+	font-family: 'Suez One', serif;
+}
+
+#prava {
+	float: left;
+	margin-left: 5%;
+	margin-top: 40px;
+	font-size: 20px;
+}
+
+#prava>a {
+	color: white;
+}
+
+#prava>a:hover {
+	color: aeaeae;
+	border-bottom: 1px solid silver;
+}
+
+#ccbllki {
+	float: right;
+	width: 40%;
+	margin-right: 15%;
+	margin-top:10px;
+}
+
+.cc1, .cc2, .cc3 {
+	float: right;
+	width: 30px;
+	height: 30px;
+	margin-left: 2%;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+	#ccbllki {
+	float: right;
+	width: 40%;
+	margin-right: 15%;
+	margin-top: 25px;
+	}
+	#myname {
+	margin-right: 5%;
+	color: #f4f4f4ref;
+	font-size: 22px;
+	padding-top: 20px;
+	float: right;
+	font-family: 'Suez One', serif;
+	}
+}
+@media (max-width: 600px) {
+	#prava {
+		display: none;
+	}
+	#ccbllki {
+		display: none;
+	}
+	#myname {
+	color: #f4f4f4ref;
+	font-size: 22px;
+	padding-top: 12px;
+	font-family: 'Suez One', serif;
+	text-align:center;
+	margin-right: 15%;
+	}
+}
+@media (max-width: 400px) {
+	#myname {
+		margin-right: 5%;
+	}
+}
+
+@media (max-width: 300px) {
+	#ccbllki {
+	width: 40%;
+	margin-right: 38%;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	}
+	.cc1, .cc2, .cc3 {
+	width: 30px;
+	float: right;
+	height: 30px;
+	margin-left: 1%;
+	}
+	#myname {
+		margin-right: 2%;
+	}
+}
+/*----------------------------------
+------------------------------------
+Конец Основная страница
+------------------------------------
+----------------------------------*/
+
+
+/*----------------------------------
+------------------------------------
+Страница все права защищены
+------------------------------------
+----------------------------------*/
+
+/*
+Права
+*/
+
+#main {
+	margin-left: 5%;
+	margin-top: 40px;
+}
+
+/*Вся информация*/
+
+.text1, .text6, .text5, .text7 {
+	height: 100%;
+	padding: 15px;
+	padding-top: 20px;
+	background-color: rgba(243,243,243,0.5);
+	margin: 15px;
+	border-radius: 30px;
+	border: 1px solid #A9A9A9;
+	text-align:justify;
+	font-size: 24px;
+	line-height: 50px;
+}
+
+.text5 {
+	height: 100%;
+	padding-top: 30px;
+}
+
+/*Заголовок для новой страницы*/
+.heading {
+	font-size: 26px;
+	border-bottom: 2px solid rgb(56,8,0);
+	font-family: 'Roboto Slab', serif;
+	color: rgb(56,8,0);
+	padding: 0px 5px;
+}
+
+.heading:first-letter {
+	color: rgb(223,190,105);
+}
+/*
+------------>
+Конец заголовка
+<------------
+*/
+/*Адаптивность*/
+@media (min-width: 1051px) {
+	.text5, .text6, .text7 {
+		width: 90%;
+	}
+	.text5 {
+		height: 120%;
+		padding-top: 2%;
+	}
+	.text1{
+		width: 123%;
+		height: 100%;
+		padding-top: 2%;
+	}
+}
+@media (max-width: 700px) {
+	.text7 {
+		width: 100%;
+		padding-top: 8%;
+		padding-bottom:8%;
+		height: 100%;
+	}
+}
+@media (max-width: 1100px) and (min-width: 700px) {
+	.text5, .text6, .text7 {
+		width: 90%;
+	}
+	.text5 {
+		height: 100%;
+		padding-top: 2%;
+	}
+	.text6 {
+		width: 85%;
+		padding-top: 4%;
+		padding-bottom:4%;
+		height: 100%;
+	}
+	.text1 {
+		width: 88%;
+		height: 100%;
+		padding-top: 2%;
+	}
+}
+@media (max-width: 700px) {
+	 .text6, .text7 {
+		width: 90%;
+		height: 100%;
+		padding-top: 8%;
+		padding-bottom: 8%;
+	}
+	.text1{
+		width: 87%;
+		height: 100%;
+		padding-top: 2%;
+	}
+}
+@media (max-width: 600px) and (min-width: 500px) {
+	.text6, .text7 {
+		width: 85%;
+		height: 100%;
+		padding-top: 8%;
+		padding-bottom: 8%;
+	}
+	.text6 {
+		padding-top: 8%;
+		padding-bottom:8%;
+		height: 100%;
+	}
+	.text1{
+		width: 87%;
+		height: 100%;
+		padding-top: 2%;
+	}
+}
+
+@media (max-width: 498px)  {
+	.text6, .text7 {
+		width: 80%;
+		height: 100%;
+		padding-top: 8%;
+		padding-bottom: 8%;
+	}
+	.text6 {
+		height: 100%;
+		padding-bottom: 8%;
+	}
+	.text1 {
+		width:85%;
+		height:100%;
+		padding-top: 2%;
+	}
+	.text5 {
+		width: 75%;
+		height: 100%;
+	}
+	.img1 {
+		width: 85%;
+	}
+}
+
+@media (max-width: 400px) {
+	.text5, .text6{
+		width: 90%;
+		height: 100%;
+		padding-top: 8%;
+	}
+	.text6 {
+		height: 100%;
+		width: 80%;
+		padding-bottom: 8%;
+	}
+	.text5 {
+		width: 75%;
+		height: 100%;
+	}
+	.text7 {
+		width: 80%;
+		height: 100%;
+	}
+	.text1 {
+		width:78%;
+		height:100%;
+		padding-top: 2%;
+	}
+	.img1 {
+		width: 85%;
+	}
+	.img2 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 300px) {
+	.text5, .text6 {
+		width: 74%;
+		height: 100%;
+		padding-top: 8%;
+	}
+	.text6 {
+		height: 100%;
+		padding-top: 8%;
+		padding-bottom: 8%;
+	}
+	.text5 {
+		height: 100%;
+		width: 75%;
+		padding-top: 2%;
+	}
+	.text1 {
+		width:74%;
+		height:140%;
+		padding-top: 3%;
+	}
+	.img1 {
+		width: 70%;
+	}
+	.img2 {
+		width: 100%;
+	}
+}
+	
+/*
+------------>
+Конец адаптации
+<------------
+*/
+/*
+
+/*----------------------------------
+------------------------------------
+Конец страницы все права защищены
+------------------------------------
+----------------------------------*/
+
+/*----------------------------------
+------------------------------------
+Новости
+------------------------------------
+----------------------------------*/
+/*
+Новости
+*/
+
+/*Вся информация*/
+
+
+li {
+	margin-left: 5%;
+}
+
+
+/*
+------------>
+Конец заголовка
+<------------
+
+/*----------------------------------
+------------------------------------
+Конец Новости
+------------------------------------
+----------------------------------*/
+
+/*------------------------
+
+Адаптивность футер, шапка, панель навигации
+---------------------------------*/
+@media (max-width: 300px) {
+	footer {
+	width: 116%;
+	padding: 0.7%;
+	}
+	nav {
+	width: 116%;
+	padding: 7px 0.7%;
+	}
+	header {
+	width: 116%;
+	padding: 0.7%;
+	}
+}
+
+
+
+.img1 {
+	height: 100%;
+	padding: 15px;
+	margin: 15px;
+	border-radius: 20px;
+}
+
+/*--------------------------------
+Фотогалерея
+---------------------------------*/
+
+.foto1 {
+	float: left; 
+	background-image: url(images/1.jpg);
+	width: 100%;
+	height: 800px;
+	width: 99.4%;
+	padding: 7px 0.4%;
+}
+
+.content-fg1 {
+	font-family: 'Lobster', cursive;
+	text-shadow: 1px 1px 1px black;
+	float: left;
+	height: 100%;
+	width: 20%;
+	background-color: rgb(148,104,46);
+	border: 5px solid rgb(59,15,2);
+}
+
+.content-fg3 {
+	float: right;
+	height: 100%;
+	width: 20%;
+	background-image: url(../images/bok_panel.jpg);
+	border: 5px solid rgb(59,15,2);
+	background-size: cover;
+}
+
+.content-fg2 {
+	border: 10px solid rgb(59,15,2); 
+	background-color: black;
+	width: 46.1%;
+	margin-left: 5.5%;
+	margin-top: 10%;
+	float: left;
+	min-height: 50%;
+	height: auto;
+}
+
+#menu-fotogal {
+	line-height: 500%;
+	width: 99.4%;
+	text-align:center;
+	padding: 7px 0.4%;
+}
+
+#menu-fotogal a {
+	margin-top: 15px;
+	color: black;
+	font-size: 40px;
+}
+
+#menu-fotogal a:hover {
+	color: #e8622d;
+}
+
+.gallery img {
+	float: left;
+	border: 3px solid rgb(148,104,46);
+	width: 200px;
+	height: 200px;
+}
+
+.gallery {
+	float: left;
+	padding: 0% 0%;
+}
+
+#modalDiv {
+	opacity:1;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	border: 3px solid rgb(148,104,46);
+	display:none;
+	background-size: cover;
+}
+.ps1, .ps2, .ps3, .ps4, .ps5, .ps6 {
+	background-size: cover;
+}
+
+.ps1 {
+	background-image: url(../images/1_1.jpg);
+}
+
+.ps2 {
+	background-image: url(../images/2.jpg);
+}
+
+.ps3 {
+	background-image: url(../images/3.jpg);
+}
+
+.ps4 {
+	background-image: url(../images/4.jpg);
+}
+
+.ps5 {
+	background-image: url(../images/5.jpg);
+}
+
+.ps6 {
+	background-image: url(../images/6.jpg);
+}
+
+@media (max-width: 2100px)  {
+	.content-fg2 {
+		width: 46.1%;
+	}
+	.gallery img {
+		width: 302.8px;
+		height: 302.8px;
+	}
+	.foto1 {
+		height: 1000px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 35px;
+	}
+	#menu-fotogal {
+		line-height: 460%;
+	}
+}
+
+@media (max-width:1900px) {
+	.content-fg2 {
+		width: 46.1%;
+	}
+	.gallery img {
+		width: 269.2px;
+		height: 269.2px;
+	}
+	.foto1 {
+		height: 1000px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 35px;
+	}
+	#menu-fotogal {
+		line-height: 460%;
+	}
+}
+
+@media (max-width:1710px) {
+	.content-fg2 {
+		width: 46.1%;
+	}
+	.gallery img {
+		width: 252.2px;
+		height: 252.2px;
+	}
+	.foto1 {
+		height: 1000px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 35px;
+	}
+	#menu-fotogal {
+		line-height: 460%;
+	}
+}
+
+@media (max-width:1710px) {
+	.content-fg2 {
+		width: 46.1%;
+	}
+	.gallery img {
+		width: 252.2px;
+		height: 252.2px;
+	}
+	.foto1 {
+		height: 1000px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 35px;
+	}
+	#menu-fotogal {
+		line-height: 460%;
+	}
+}
+
+@media (max-width:1600px) {
+	.content-fg2 {
+		width: 46.1%;
+	}
+	.gallery img {
+		width: 199.8px;
+		height: 199.8px;
+	}
+	.foto1 {
+		height: 700px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 35px;
+	}
+	#menu-fotogal {
+		line-height: 460%;
+	}
+}
+
+@media (max-width:1300px) {
+	.content-fg2 {
+		width: 46.1%;
+	}
+	.gallery img {
+		width: 181.6px;
+		height: 181.6px;
+	}
+	.foto1 {
+		height: 700px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 35px;
+	}
+	#menu-fotogal {
+		line-height: 460%;
+	}
+}
+
+@media (max-width:1200px) {
+	.gallery img {
+		width: 159.8px;
+		height: 159.8px;
+	}
+	.foto1 {
+		height: 700px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 28px;
+	}
+	#menu-fotogal {
+		line-height: 400%;
+	}
+	.content-fg1, .content-fg3 {
+		height: 100%;
+	}
+}
+
+@media (max-width:1100px) {
+	.gallery img {
+		width: 159.8px;
+		height: 159.8px;
+	}
+	.foto1 {
+		height: 657px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 28px;
+	}
+	#menu-fotogal {
+		line-height: 400%;
+	}
+	.content-fg1, .content-fg3 {
+		height: 100%;
+	}
+	.content-fg2 {
+		height: 50%;
+	}
+}
+
+@media (max-width:1000px) {
+	.gallery img {
+		width: 132px;
+		height: 132px;
+	}
+	.foto1 {
+		height: 548px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 24px;
+	}
+	#menu-fotogal {
+		line-height: 400%;
+	}
+	.content-fg1, .content-fg3 {
+		height: 100%;
+	}
+	.content-fg2 {
+		height: 50%;
+	}
+}
+
+.bar1 {
+	display: inline;
+	margin-left: 35%;
+	float:left;
+	margin-top: 20%;
+	cursor:pointer;
+}
+
+.hideMenu1 {
+	text-align:center;
+	font-size: 24px;
+	color: rgba(35, 9 ,1, 1);
+	display:none;
+	width: 100%;
+	float: left;	
+}
+
+.hr1 {
+	border: 2px solid rgb(35,9,1); 
+}
+@media (min-width:900px) {
+	.bar1 {
+		display:none;
+		visibility:hidden;
+	}
+}
+@media (max-width:900px) {
+	.gallery img {
+		width: 112px;
+		height: 112px;
+	}
+	.foto1 {
+		height: 470px;
+	}
+	#menu-fotogal a {
+		margin-top: 15px;
+		color: black;
+		font-size: 24px;
+	}
+	#menu-fotogal {
+		visibility: hidden;
+		display: none;
+	}
+	.content-fg1, .content-fg3 {
+		height: 100%;
+	}
+	.content-fg2 {
+		height: 50%;
+	}
+}
+@media (max-width:800px) and (min-width: 10px) {
+	#menu-fotogal {
+		visibility: hidden;
+		display: none;
+	}
+}
+@media (max-width:800px) {
+	.gallery img {
+		width: 112px;
+		height: 112px;
+	}
+	.foto1 {
+		height: 470px;
+	}
+	.content-fg2 {
+		height: 50%;
+		margin-left: 35px;
+	}
+}
+
+@media (max-width:700px) {
+	.gallery img {
+		width: 97px;
+		height: 97px;
+	}
+	.foto1 {
+		height: 410px;
+	}
+	.content-fg2 {
+		height: 50%;
+		margin-left: 25px;
+	}
+	.hideMenu1 {
+		font-size: 1.2em;
+	}
+	.bar1{
+		margin-left: 30%;
+	}
+}
+
+@media (max-width:500px) and (min-width:10px) {
+	.content-fg3 {
+		visibility: hidden;
+		display: none;
+	}
+}
+@media (max-width:600px) {
+	.gallery img {
+		width: 77.3px;
+		height: 77.3px;
+	}
+	.foto1 {
+		height: 330px;
+		width: 100%;
+	}
+	.content-fg2 {
+		height: 50%;
+		margin-left: 2.5%;
+	}
+	.hideMenu1 {
+		font-size: 0.9em;
+	}
+	.bar1{
+		margin-left: 28%;
+	}
+}
+
+@media (max-width:500px) {
+	.gallery img {
+		width: 107.9px;
+		height: 107.9px;
+	}
+	.foto1 {
+		height: 450px;
+		width: 95%;
+	}
+	.content-fg1 {
+		width: 102%;
+		height: 12%;
+		margin-top: 1px;
+	}
+	.content-fg2 {
+		margin-top: 30%;
+		height: 50%;
+		width: 80%;
+		margin-left: 10%;
+	}
+	.hideMenu1 {
+		font-size: 0.9em;
+		margin-top: 0.7%;
+	}
+	.bar1{
+		margin-top: 1.3%;
+		margin-left: 45%;
+	}
+}
+
+@media (max-width:400px) {
+	.gallery img {
+		width: 122.1px;
+		height: 122.1px;
+	}
+	.foto1 {
+		height: 765px;
+		width: 95%;
+	}
+	.content-fg1 {
+		width: 101.5%;
+		height: 7%;
+		margin-top: 1px;
+	}
+	.content-fg2 {
+		margin-top: 35%;
+		height: 50%;
+		width: 80%;
+		margin-left: 10%;
+	}
+	.hideMenu1 {
+		font-size: 0.7em;
+		margin-top: 2%;
+	}
+	.bar1{
+		margin-top: 1.3%;
+		margin-left: 42%;
+	}
+}
+
+@media (max-width:300px) {
+	.gallery img {
+		width: 114.4px;
+		height: 114.4px;
+	}
+	.foto1 {
+		height: 720px;
+		width: 95%;
+	}
+	.content-fg1 {
+		width: 118.5%;
+		height: 7%;
+		margin-top: 1px;
+	}
+	.content-fg2 {
+		margin-top: 45%;
+		height: 50%;
+		width: 94%;
+		margin-left: 10%;
+	}
+	.hideMenu1 {
+		font-size: 0.7em;
+		margin-top: 2%;
+	}
+	.bar1{
+		margin-top: 1.3%;
+		margin-left: 42%;
+	}
+}
